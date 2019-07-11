@@ -6,12 +6,14 @@ import './Board.css';
 import { FaTimes } from 'react-icons/fa';
 import { FaCircleNotch } from 'react-icons/fa';
 import { FaRedoAlt } from 'react-icons/fa';
-
+import { animateScroll as scroll } from 'react-scroll'
+import { useAlert } from 'react-alert'
 
 
 const Board = observer(() => {
 
     const store = useStore();
+    const alert = useAlert()
 
     const checkColumn = column => {
         const item1 = store.tableBoard[0][column];
@@ -88,6 +90,8 @@ const Board = observer(() => {
         store.tableBoard[row][col] = store.nextOne;
         const haveWinner = checkBoard();
         if (haveWinner) {
+            alert.show('We have a winner!');
+            scrollToBottom();
             if (store.nextOne === "x") {
                 store.incPlayer1Wins();
                 store.setlastChampion("x");
@@ -96,6 +100,9 @@ const Board = observer(() => {
                 store.setlastChampion("o");
             }
             store.setHaveWinner(true);
+            setTimeout(()=>{
+                resetBoard();
+            }, 3000)
         } else {
             let nextOne = store.nextOne === "x" ? "o" : "x";
             store.setNextOne(nextOne);
@@ -113,9 +120,11 @@ const Board = observer(() => {
         })
     }
 
+    const scrollToBottom = () => scroll.scrollToBottom();
+
     return (
         <div className="board">
-            <div className="clear-icon"><FaRedoAlt title="clear" onClick={resetBoard} size="25px"></FaRedoAlt></div>
+            <div className="clear-icon"><FaRedoAlt title="Reset" onClick={resetBoard} size="25px"></FaRedoAlt></div>
             {getRows()}
         </div>
     )

@@ -8,9 +8,12 @@
     "mobx": "^5.11.0",
     "mobx-react-lite": "^1.4.1",
     "react": "^16.8.6",
+    "react-alert": "^5.5.0",
+    "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "react-scripts": "3.0.1",
+    "react-scroll": "^1.7.12",
     "reactstrap": "^8.0.0"
   },
   "homepage": "https://andresrestrepo.github.io/tictactoe",
