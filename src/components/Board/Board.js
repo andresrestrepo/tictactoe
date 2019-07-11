@@ -74,9 +74,12 @@ const Board = observer(() => {
             return row.fill("", 0, 3);
         })
         store.setNextOne("x");
+        store.setHaveWinner(false);
+        store.setlastChampion("");
     }
 
     const handleSquareClick = event => {
+        if (store.haveWinner) return;
         const col = event.target.getAttribute("col");
         const row = event.target.getAttribute("row");
 
@@ -87,10 +90,12 @@ const Board = observer(() => {
         if (haveWinner) {
             if (store.nextOne === "x") {
                 store.incPlayer1Wins();
+                store.setlastChampion("x");
             } else {
                 store.incPlayer2Wins();
+                store.setlastChampion("o");
             }
-            resetBoard();
+            store.setHaveWinner(true);
         } else {
             let nextOne = store.nextOne === "x" ? "o" : "x";
             store.setNextOne(nextOne);

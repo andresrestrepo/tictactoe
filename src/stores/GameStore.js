@@ -18,6 +18,14 @@ export function createGameStore() {
         }, 
         incPlayer2Wins() {
             this.player2Wins++;
+        },
+        haveWinner: false,
+        setHaveWinner(value){
+            this.haveWinner = value;
+        },
+        lastChampion: "",
+        setlastChampion(value){
+            this.lastChampion = value
         }
 
     }

@@ -19,3 +19,15 @@
     margin-left: auto;
     border: 5px solid #2196F3;
 }
+
+.win-message{
+    color: #00bcd4;
+    background: #e8e8e8;
+    padding: 12px;
+    font-size: 23px;
+    border-radius: 6px;
+}
+
+.container-champion{
+    background: #dcd8d8;
+}
