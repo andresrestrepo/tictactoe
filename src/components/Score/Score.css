@@ -1,0 +1,21 @@
+.score{
+    text-align: center;
+ 
+}
+
+.information-title{
+    font-size: 23px;
+    margin-bottom: 17px;
+    text-decoration: underline;
+}
+
+.container-next-player-icon{
+    background: #00bcd4;
+    border-radius: 4px;
+    padding: 3px;
+    color: white;
+    width: 74px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid #2196F3;
+}

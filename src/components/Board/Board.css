@@ -1,0 +1,29 @@
+.square{
+    padding: 30px;
+    float: left;
+    background: #00bcd4;
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.game-row{
+    clear: both;
+}
+
+.board{
+    display: table;
+    margin: 0 auto;
+    border: 1px dashed #bbbbbb;
+    padding: 10px;
+}
+
+.clear-icon > svg{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
