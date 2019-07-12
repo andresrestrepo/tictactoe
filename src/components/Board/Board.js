@@ -80,6 +80,20 @@ const Board = observer(() => {
         store.setlastChampion("");
     }
 
+    const isBoardComplete = () => {
+        let isComplete = true;
+        store.tableBoard.map(row => {
+            row.map(item => {
+                if (item === "") {
+                    isComplete = false;
+                }
+                return item;
+            })
+            return row;
+        })
+        return isComplete;
+    }
+
     const handleSquareClick = event => {
         if (store.haveWinner) return;
         const col = event.target.getAttribute("col");
@@ -100,12 +114,19 @@ const Board = observer(() => {
                 store.setlastChampion("o");
             }
             store.setHaveWinner(true);
-            setTimeout(()=>{
+            setTimeout(() => {
                 resetBoard();
             }, 3000)
         } else {
-            let nextOne = store.nextOne === "x" ? "o" : "x";
-            store.setNextOne(nextOne);
+            if (isBoardComplete()) {
+                alert.show('We have a tie!');
+                setTimeout(() => {
+                    resetBoard();
+                }, 3000)
+            } else {
+                let nextOne = store.nextOne === "x" ? "o" : "x";
+                store.setNextOne(nextOne);
+            }
         }
     }
 
