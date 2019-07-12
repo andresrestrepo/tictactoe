@@ -14,10 +14,10 @@
     border-radius: 4px;
     padding: 3px;
     color: white;
-    width: 74px;
+    width: 51px;
     margin-right: auto;
     margin-left: auto;
-    border: 5px solid #2196F3;
+    border: 3px solid #007bff;
 }
 
 .win-message{
@@ -26,8 +26,14 @@
     padding: 12px;
     font-size: 23px;
     border-radius: 6px;
+    margin-bottom: 15px;
 }
 
 .container-champion{
     background: #dcd8d8;
+    padding: 11px;
+    border-radius: 4px;
+    width: 180px;
+    margin-right: auto;
+    margin-left: auto;
 }

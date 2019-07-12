@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import './Score.css'
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Badge } from 'reactstrap';
 import { useStore } from '../../stores/ConfigStore';
 import { FaTimes } from 'react-icons/fa';
 import { FaCircleNotch } from 'react-icons/fa';
@@ -38,11 +38,11 @@ const Score = observer(() => {
 
             <Row>
                 <Col xs="6">Player 1 wins:</Col>
-                <Col xs="6">{store.player1Wins}</Col>
+                <Col xs="6"><Badge color="primary">{store.player1Wins}</Badge></Col>
             </Row>
             <Row>
                 <Col xs="6">Player 2 wins:</Col>
-                <Col xs="6">{store.player2Wins}</Col>
+                <Col xs="6"><Badge color="primary">{store.player2Wins}</Badge></Col>
             </Row><br></br>
             <div className="container-champion">
                 {champion}{championImage}
