@@ -24,25 +24,25 @@ const Score = observer(() => {
         <div className="score">
             <div className="information-title">Information</div>
             <Row>
-                <Col sm="6">Player 1:</Col>
-                <Col sm="6"><FaTimes size={iconSize}></FaTimes></Col>
+                <Col xs="6">Player 1:</Col>
+                <Col xs="6"><FaTimes size={iconSize}></FaTimes></Col>
             </Row>
             <Row>
-                <Col sm="6">Player 2:</Col>
-                <Col sm="6"><FaCircleNotch size={iconSize}></FaCircleNotch></Col>
+                <Col xs="6">Player 2:</Col>
+                <Col xs="6"><FaCircleNotch size={iconSize}></FaCircleNotch></Col>
             </Row><br></br>
             <Row>
-                <Col sm="6">Next Player:</Col>
-                <Col sm="6"><div className="container-next-player-icon">{nextPlayerIcon}</div></Col>
+                <Col xs="6">Next Player:</Col>
+                <Col xs="6"><div className="container-next-player-icon">{nextPlayerIcon}</div></Col>
             </Row><br></br>
 
             <Row>
-                <Col sm="6">Player 1 wins:</Col>
-                <Col sm="6">{store.player1Wins}</Col>
+                <Col xs="6">Player 1 wins:</Col>
+                <Col xs="6">{store.player1Wins}</Col>
             </Row>
             <Row>
-                <Col sm="6">Player 2 wins:</Col>
-                <Col sm="6">{store.player2Wins}</Col>
+                <Col xs="6">Player 2 wins:</Col>
+                <Col xs="6">{store.player2Wins}</Col>
             </Row><br></br>
             <div className="container-champion">
                 {champion}{championImage}
