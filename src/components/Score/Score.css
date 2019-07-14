@@ -10,18 +10,17 @@
 }
 
 .container-next-player-icon{
-    background: #00bcd4;
+    background: #007bff;
     border-radius: 4px;
     padding: 3px;
     color: white;
-    width: 51px;
+    width: 36px;
     margin-right: auto;
     margin-left: auto;
-    border: 3px solid #007bff;
 }
 
 .win-message{
-    color: #00bcd4;
+    color: #505b5d;
     background: #e8e8e8;
     padding: 12px;
     font-size: 23px;

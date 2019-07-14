@@ -8,6 +8,8 @@ import { Row, Col } from 'reactstrap';
 
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
+import { useSpring, animated, config } from 'react-spring'
+
 const options = {
   position: positions.TOP_CENTER,
   timeout: 3000,
@@ -16,11 +18,17 @@ const options = {
 }
 
 function App() {
+  const props = useSpring({
+    to: { opacity: 1, marginLeft: 0 },
+    from: { opacity: 0, marginLeft: -1000 },
+    config: config.slow
+  })
   return (
     <StoreProvider>
       <AlertProvider template={AlertTemplate} {...options}>
         <Container>
-          <div className="title">TicTacToe</div>
+          <animated.div style={props}>
+          <div className="title">TicTacToe</div>    </animated.div>
           <Row>
             <Col sm="12" md="6">
               <div>

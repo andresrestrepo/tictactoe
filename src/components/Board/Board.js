@@ -133,8 +133,8 @@ const Board = observer(() => {
     const getRows = () => {
         return store.tableBoard.map((rows, rowIndex) => {
             let row = rows.map((cell, column) => <div onClick={handleSquareClick} key={`${column}-${rowIndex}`} col={column} row={rowIndex} className="square">
-                {cell === "x" ? <FaTimes size="40px"></FaTimes> :
-                    cell === "o" ? <FaCircleNotch size="40px"></FaCircleNotch> : ""}
+                {cell === "x" ? <div><FaTimes size="60px"></FaTimes></div> :
+                    cell === "o" ? <div><FaCircleNotch size="60px"></FaCircleNotch></div> : ""}
 
             </div>)
             return <div key={rowIndex} className="game-row">{row}</div>
